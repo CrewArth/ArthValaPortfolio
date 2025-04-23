@@ -1,22 +1,22 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import { 
-  FaPython, FaJs, FaReact, FaNode, FaDatabase, 
-  FaGitAlt, FaDocker, FaFigma, FaBrain, FaUsers, 
+  FaPython, FaNode, 
+  FaGitAlt, FaFigma, FaBrain, FaUsers, 
   FaLightbulb, FaChartLine,
   FaJava,
   FaGithub
 } from "react-icons/fa";
 import { 
   SiTypescript, SiNextdotjs, SiTailwindcss, SiFlask,
-  SiMongodb, SiFirebase, SiTensorflow, SiPytorch,
+  SiMongodb, SiFirebase, SiTensorflow,
   SiHtml5,
   SiDjango,
   SiOpencv,
   SiKeras
 } from "react-icons/si";
+import AnimationWrapper from "../ui/AnimationWrapper";
 
 interface SkillCategory {
   title: string;
@@ -41,7 +41,6 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
     skills: [
-      // { name: "React", icon: <FaReact size={24} />, color: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300" },
       { name: "HTML", icon: <SiHtml5 size={24} />, color: "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300" },
       { name: "Next.js", icon: <SiNextdotjs size={24} />, color: "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300" },
       { name: "Tailwind CSS", icon: <SiTailwindcss size={24} />, color: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300" },
@@ -85,66 +84,41 @@ const skillCategories: SkillCategory[] = [
 ];
 
 export default function Skills() {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <section id="skills" className="section">
       <div className="container">
-        <motion.h2 
-          className="section-title"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          transition={{ duration: 0.5 }}
-        >
-          My Skills
-        </motion.h2>
-        
-        <motion.p
-          className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          I've worked with a variety of technologies and continue to expand my skillset.
-          Here's an overview of my technical and soft skills.
-        </motion.p>
+        <AnimationWrapper variant="fadeInScale" className="mb-12">
+          <h2 className="section-title">
+            My Skills
+          </h2>
+          
+          <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+            I&apos;ve worked with a variety of technologies and continue to expand my skillset.
+            Here&apos;s an overview of my technical and soft skills.
+          </p>
+        </AnimationWrapper>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
-            <motion.div
+            <AnimationWrapper
               key={category.title}
+              variant="fadeUp"
+              delay={0.1 + categoryIndex * 0.1}
               className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeIn}
-              transition={{ duration: 0.5, delay: 0.1 + categoryIndex * 0.1 }}
             >
               <h3 className="text-xl font-bold mb-6">{category.title}</h3>
               <div className="flex flex-wrap gap-3">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.div
+                {category.skills.map((skill) => (
+                  <div
                     key={skill.name}
                     className={`flex items-center gap-2 px-3 py-2 rounded-lg ${skill.color}`}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    variants={fadeIn}
-                    transition={{ duration: 0.3, delay: 0.2 + categoryIndex * 0.1 + skillIndex * 0.05 }}
                   >
                     {skill.icon}
                     <span>{skill.name}</span>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
-            </motion.div>
+            </AnimationWrapper>
           ))}
         </div>
       </div>

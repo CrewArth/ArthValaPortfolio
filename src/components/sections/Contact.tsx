@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaPaperPlane } from "react-icons/fa";
 import { HiLocationMarker } from "react-icons/hi";
 import AnimationWrapper from "../ui/AnimationWrapper";
@@ -218,10 +217,10 @@ export default function Contact() {
             </div>
             
             <div>
-              <h3 className="text-xl font-bold mb-4">Let's Build Something Together</h3>
+              <h3 className="text-xl font-bold mb-4">Let&apos;s Build Something Together</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Whether you have a project idea, job opportunity, or just want to say hi, 
-                I'm always open to discussing new opportunities and creative collaborations.
+                I&apos;m always open to discussing new opportunities and creative collaborations.
               </p>
             </div>
           </AnimationWrapper>

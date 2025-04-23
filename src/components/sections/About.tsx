@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaDownload } from "react-icons/fa";
 import AnimationWrapper from "../ui/AnimationWrapper";
@@ -34,11 +33,6 @@ const timelineItems: TimelineItem[] = [
 ];
 
 export default function About() {
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 },
-  };
-
   return (
     <section id="about" className="section bg-gray-50 dark:bg-gray-800/30">
       <div className="container">
@@ -65,14 +59,14 @@ export default function About() {
           <AnimationWrapper variant="fadeRight" delay={0.4}>
             <div>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Hello! I'm Arth Vala, an Integrated MCA student with specializing in Artificial Intelligence at Parul University, Vadodara. 
+                Hello! I&apos;m Arth Vala, an Integrated MCA student with specializing in Artificial Intelligence at Parul University, Vadodara. 
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                I'm passionate about developing AI solutions and full-stack applications powered by AI that address real-world challenges.
+                I&apos;m passionate about developing AI solutions and full-stack applications powered by AI that address real-world challenges.
                 My interests extend beyond coding to include playing sports.
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
-                I'm constantly learning and exploring new technologies to expand my skill set and stay at the forefront of technological advancements.
+                I&apos;m constantly learning and exploring new technologies to expand my skill set and stay at the forefront of technological advancements.
               </p>
 
               <a
@@ -88,7 +82,7 @@ export default function About() {
         </div>
 
         {/* Timeline Section */}
-        <AnimationWrapper variant="fadeUp" delay={0.6} className="mt-20">
+        <AnimationWrapper variant="fadeUp" delay={0.6} className="mt-20 mb-20">
           <h3 className="text-2xl font-bold mb-8 text-center">Education & Experience</h3>
           
           {/* Desktop Timeline (hidden on mobile) */}

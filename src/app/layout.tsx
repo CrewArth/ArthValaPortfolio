@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   title: "Arth Vala | Portfolio",
   description: "Personal portfolio website of Arth Vala - AI, Web Dev, and Creative Tech enthusiast",
   keywords: ["portfolio", "developer", "AI", "web development", "full stack", "Arth Vala"],
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: 'any', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ]
+  },
 };
 
 export default function RootLayout({
