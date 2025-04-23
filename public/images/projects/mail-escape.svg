@@ -1,0 +1,5 @@
+<svg width="400" height="225" viewBox="0 0 400 225" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="225" fill="#F59E0B" />
+  <rect x="100" y="80" width="200" height="65" rx="8" fill="#FBBF24" />
+  <text x="200" y="120" font-family="Arial" font-size="18" fill="#FFFFFF" text-anchor="middle">Mail Escape</text>
+</svg> 
