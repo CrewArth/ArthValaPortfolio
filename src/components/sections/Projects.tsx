@@ -64,6 +64,15 @@ const projects: Project[] = [
     tags: ["Python", "OpenCV", "Tensorflow", "Machine Learning"],
     github: "https://github.com/CrewArth/ObjectTracking-in-Python",
   },
+  {
+    id: "yoga-pose",
+    title: "Yoga Pose Detector",
+    description: "This App allows to detect the pose using OpenCV and Mediapipe.",
+    longDescription: "Yoga Pose detector detects the Pose and tells you the name of the pose instantly. It uses OpenCV for Camera Feed, Mediapipe and Landmark Recognition and ML Model to detect and provide Pose Name.",
+    image: "/images/projects/yoga-pose.jpg",
+    tags: ["Python", "OpenCV", "Tensorflow", "Mediapipe"],
+    github: "https://github.com/CrewArth/YogaPoseDetector",
+  },
 ];
 
 export default function Projects() {

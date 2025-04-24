@@ -84,43 +84,23 @@ export default function Hero() {
             delay={0.4}
             className="flex-1 flex justify-center lg:justify-end"
           >
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl">
-              <Image
-                src="/images/projects/profilephoto.png"
-                alt="Arth Vala"
-                fill
-                className="object-cover"
-                priority
-              />
+            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-xl group">
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/40 to-purple-600/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+              <div className="absolute inset-0 scale-100 group-hover:scale-110 transition-transform duration-500 ease-in-out">
+                <Image
+                  src="/images/projects/profilephoto.png"
+                  alt="Arth Vala"
+                  fill
+                  sizes="(max-width: 768px) 256px, 320px"
+                  className="object-cover"
+                  priority
+                  quality={85}
+                />
+              </div>
             </div>
           </AnimationWrapper>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center"
-        >
-          <span className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-            Scroll Down
-          </span>
-          <div className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex justify-center">
-            <motion.div
-              animate={{
-                y: [0, 12, 0],
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatType: "loop",
-              }}
-              className="w-2 h-2 bg-gray-400 dark:bg-gray-600 rounded-full mt-2"
-            ></motion.div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
-} 
+}
