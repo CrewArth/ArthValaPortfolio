@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaDownload, FaQuoteLeft, FaQuoteRight, FaUserGraduate } from "react-icons/fa";
 import AnimationWrapper from "../ui/AnimationWrapper";
 
+
 interface TimelineItem {
   year: string;
   title: string;
@@ -79,6 +80,9 @@ export default function About() {
               
               <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 Hello! I&apos;m <span className="text-blue-600 dark:text-blue-400 font-semibold">Arth Vala</span>, an Integrated MCA student with specializing in Artificial Intelligence at Parul University, Vadodara. 
+              </p>
+              <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+              <span className="text-yellow-500 dark:text-yello-400 font-semibold">🥇Gold Medalist @ Parul University | IMCA 2021 - 2025</span> 
               </p>
               <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 I&apos;m passionate about developing <span className="text-purple-600 dark:text-purple-400 font-semibold">AI solutions</span> and <span className="text-blue-600 dark:text-blue-400 font-semibold">full-stack applications</span> powered by AI that address real-world challenges.
