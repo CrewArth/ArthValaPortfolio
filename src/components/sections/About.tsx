@@ -42,7 +42,7 @@ export default function About() {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </AnimationWrapper>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center select-none">
           {/* Profile Image */}
           <AnimationWrapper variant="fadeLeft" delay={0.2}>
             <div className="flex justify-center">
@@ -58,7 +58,7 @@ export default function About() {
                 <div className="absolute inset-0 border-0 group-hover:border-4 border-white/30 dark:border-gray-300/20 rounded-xl transition-all duration-300 z-10"></div>
                 
                 {/* Image with zoom effect */}
-                <div className="absolute inset-0 scale-100 group-hover:scale-105 transition-transform duration-700 ease-in-out">
+                <div className="absolute inset-0 scale-100 group-hover:scale-105 transition-transform duration-700 ease-in-out select-none">
                   <Image
                     src="/images/projects/about.png"
                     alt="Arth Vala"
@@ -116,7 +116,7 @@ export default function About() {
                  style={{ top: "24px", height: "calc(100% - 24px)" }}></div>
             
             {/* Timeline items */}
-            <div className="space-y-16 relative pb-10">
+            <div className="space-y-16 relative pb-10 select-none">
               {timelineItems.map((item, index) => (
                 <AnimationWrapper 
                   key={index}

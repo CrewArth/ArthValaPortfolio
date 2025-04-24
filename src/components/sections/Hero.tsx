@@ -24,16 +24,16 @@ export default function Hero() {
             variant="fadeUp"
             className="flex-1 text-center lg:text-left"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 select-none">
               <GradientTypingAnimation 
                 text="Hi, I'm Arth Vala" 
-                className="font-bold"
+                className="font-bold select-none"
                 typingSpeed={90}
                 gradientColors={["#3b82f6", "#4f46e5", "#7c3aed", "#6366f1", "#8b5cf6"]}
                 delay={1000}
               />
             </h1>
-            <h2 className="text-3xl md:text-4xl font-medium mb-6">
+            <h2 className="text-3xl md:text-4xl font-medium mb-6 select-none">
             An AI enthusiast with a passion for Computer Vision and Python Development.
             </h2>
           <br />
