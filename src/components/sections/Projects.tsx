@@ -87,7 +87,7 @@ export default function Projects() {
     <section id="projects" className="section bg-gray-50 dark:bg-gray-800/30">
       <div className="container">
         <motion.h2 
-          className="section-title"
+          className="section-title outfit-outfit"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -98,7 +98,7 @@ export default function Projects() {
         </motion.h2>
         
         <motion.p
-          className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12"
+          className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 outfit-outfit"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -133,8 +133,8 @@ export default function Projects() {
               
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <h3 className="text-xl font-bold mb-2 outfit-outfit">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4 outfit-outfit">
                   {project.description}
                 </p>
                 
@@ -219,7 +219,7 @@ export default function Projects() {
               </div>
               
               <div className="p-6">
-                <h3 className="text-2xl font-bold mb-2">{selectedProject.title}</h3>
+                <h3 className="text-2xl font-bold mb-2 outfit-outfit">{selectedProject.title}</h3>
                 
                 {/* Tags */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -233,7 +233,7 @@ export default function Projects() {
                   ))}
                 </div>
                 
-                <div className="text-gray-600 dark:text-gray-300 mb-6">
+                <div className="text-gray-600 dark:text-gray-300 mb-6 outfit-outfit">
                   <p className="mb-4">{selectedProject.longDescription || selectedProject.description}</p>
                 </div>
                 
