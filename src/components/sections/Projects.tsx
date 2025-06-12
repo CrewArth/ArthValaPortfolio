@@ -4,6 +4,11 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
+import Card from '@mui/material/Card';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
+import Button from '@mui/material/Button';
 
 interface Project {
   id: string;
@@ -113,80 +118,69 @@ export default function Projects() {
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
-              className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeIn}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
-              onClick={() => setSelectedProject(project)}
+              style={{ display: 'flex', justifyContent: 'center' }}
             >
-              {/* Project Image */}
-              <div className="relative h-48 w-full">
-                <Image
-                  src={project.image}
+              <Card sx={{ maxWidth: 370, width: '100%', borderRadius: 4, boxShadow: 6, transition: 'transform 0.3s, box-shadow 0.3s', '&:hover': { transform: 'translateY(-8px) scale(1.03)', boxShadow: 12 }, background: 'linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%)', }}>
+                <CardMedia
+                  component="img"
+                  height="190"
+                  image={project.image}
                   alt={project.title}
-                  fill
-                  className="object-cover"
+                  style={{ objectFit: 'cover' }}
                 />
-              </div>
-              
-              {/* Project Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 outfit-outfit">{project.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4 outfit-outfit">
-                  {project.description}
-                </p>
-                
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span 
-                      key={`${project.id}-${tag}`}
-                      className="text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                {/* Project Links */}
-                <div className="flex items-center space-x-4">
-                  {project.github && (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                      aria-label={`GitHub repository for ${project.title}`}
-                    >
-                      <FaGithub size={20} />
-                    </a>
-                  )}
-                  {project.demo && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                      aria-label={`Live demo for ${project.title}`}
-                    >
-                      <FaExternalLinkAlt size={18} />
-                    </a>
-                  )}
-                  <button
-                    className="ml-auto text-blue-600 dark:text-blue-400 font-medium"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      setSelectedProject(project);
-                    }}
-                  >
+                <CardContent>
+                  <h3 className="text-xl font-bold mb-2 outfit-outfit">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 outfit-outfit">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag) => (
+                      <span 
+                        key={`${project.id}-${tag}`}
+                        className="text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </CardContent>
+                <CardActions sx={{ display: 'flex', justifyContent: 'space-between', px: 2, pb: 2 }}>
+                  <div style={{ display: 'flex', gap: 12 }}>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        onClick={e => e.stopPropagation()}
+                        aria-label={`GitHub repository for ${project.title}`}
+                      >
+                        <FaGithub size={20} />
+                      </a>
+                    )}
+                    {project.demo && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        onClick={e => e.stopPropagation()}
+                        aria-label={`Live demo for ${project.title}`}
+                      >
+                        <FaExternalLinkAlt size={18} />
+                      </a>
+                    )}
+                  </div>
+                  <Button size="small" color="primary" onClick={e => { e.stopPropagation(); setSelectedProject(project); }} sx={{ fontWeight: 600, textTransform: 'none' }}>
                     Learn More
-                  </button>
-                </div>
-              </div>
+                  </Button>
+                </CardActions>
+              </Card>
             </motion.div>
           ))}
         </div>
