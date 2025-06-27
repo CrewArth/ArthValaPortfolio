@@ -3,9 +3,7 @@
 import React from "react";
 import { 
   FaPython, FaNode, 
-  FaGitAlt, FaFigma, FaBrain, FaUsers, 
-  FaLightbulb, FaChartLine,
-  FaJava,
+  FaGitAlt, FaFigma,FaJava,
   FaGithub, FaFileExcel,FaChartBar
 } from "react-icons/fa";
 import { 
