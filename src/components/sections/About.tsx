@@ -16,7 +16,7 @@ const timelineItems: TimelineItem[] = [
   {
     year: "2021 - 2025",
     title: "Integrated MCA",
-    description: "Parul University, Vadodara - Pursued Integrated Master of Computer Applications with Specialization in Artificial Intelligence and achieved 8.90 CGPA.",
+    description: "Parul University, Vadodara — Specialized in Artificial Intelligence and secured a CGPA of 8.90.",
     type: "education",
   },
   {
