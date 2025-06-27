@@ -21,8 +21,7 @@ export default function Footer() {
               &copy; {currentYear} Arth Vala. All rights reserved.
             </p>
             <p className="mt-2 text-sm">
-              Made with ❤️ by Vibe Coding/ Prompt Engineering
-            </p>
+              Made with ❤️ by Vibe Coding            </p>
           </div>
         </div>
       </div>

@@ -91,16 +91,9 @@ export default function Projects() {
   return (
     <section id="projects" className="section bg-gray-50 dark:bg-gray-800/30">
       <div className="container">
-        <motion.h2 
-          className="section-title outfit-outfit"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          transition={{ duration: 0.5 }}
-        >
-          My Projects
-        </motion.h2>
+      <h2 className="section-title">
+            My Projects
+      </h2>
         
         <motion.p
           className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 outfit-outfit"
