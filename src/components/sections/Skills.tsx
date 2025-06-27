@@ -6,15 +6,17 @@ import {
   FaGitAlt, FaFigma, FaBrain, FaUsers, 
   FaLightbulb, FaChartLine,
   FaJava,
-  FaGithub
+  FaGithub, FaFileExcel,FaChartBar
 } from "react-icons/fa";
 import { 
   SiTypescript, SiNextdotjs, SiTailwindcss, SiFlask,
   SiMongodb, SiFirebase, SiTensorflow,
-  SiHtml5,
+  SiHtml5,  
   SiDjango,
   SiOpencv,
-  SiKeras
+  SiKeras,
+  SiMysql,
+  SiTableau,
 } from "react-icons/si";
 import AnimationWrapper from "../ui/AnimationWrapper";
 
@@ -51,7 +53,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Node.js", icon: <FaNode size={24} />, color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
       { name: "Flask", icon: <SiFlask size={24} />, color: "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300" },
-      { name: "MongoDB", icon: <SiMongodb size={24} />, color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
+      { name: "MongoDB", icon: <SiMongodb size={24} />, color: "bg-green-100 text-green-700 dark:bg-white-900/30 dark:text-green-900" },
       { name: "Firebase", icon: <SiFirebase size={24} />, color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" },
       { name: "Django", icon: <SiDjango size={24} />, color: "bg-green-900 text-green-100 dark:bg-green-900/30 dark:green-900" },
     ]
@@ -73,12 +75,13 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    title: "Soft Skills",
+    title: "Data Analytics",
     skills: [
-      { name: "Problem Solving", icon: <FaBrain size={24} />, color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300" },
-      { name: "Teamwork", icon: <FaUsers size={24} />, color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300" },
-      { name: "Creativity", icon: <FaLightbulb size={24} />, color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" },
-      { name: "Adaptability", icon: <FaChartLine size={24} />, color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
+      { name: "Excel", icon: <FaFileExcel size={24} />, color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
+      { name: "Power BI", icon: <FaChartBar size={24} />, color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" },
+      { name: "SQL", icon: <SiMysql size={24} />, color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300" },
+      { name: "Tableau", icon: <SiTableau size={24} />, color: "bg-gradient-to-r from-blue-100 to-orange-100 text-blue-800 dark:from-blue-900 dark:to-purple-900 dark:text-orange-300" },
+
     ]
   },
 ];

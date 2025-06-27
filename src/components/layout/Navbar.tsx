@@ -24,9 +24,9 @@ export default function Navbar() {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
     if (isDarkMode) {
-      document.body.classList.add("dark");
+      document.documentElement.classList.add("dark");
     } else {
-      document.body.classList.add("dark");
+      document.documentElement.classList.remove("dark");
     }
   }, []);
 

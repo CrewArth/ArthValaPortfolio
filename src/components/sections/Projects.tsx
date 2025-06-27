@@ -135,14 +135,14 @@ export default function Projects() {
                 />
                 <CardContent>
                   <h3 className="text-xl font-bold mb-2 outfit-outfit">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 outfit-outfit">
+                  <p className="text-gray-600 dark:text-black-300 mb-4 outfit-outfit">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
                       <span 
                         key={`${project.id}-${tag}`}
-                        className="text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md"
+                        className="text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white px-2 py-1 rounded-md"
                       >
                         {tag}
                       </span>
@@ -156,7 +156,7 @@ export default function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="text-gray-600 dark:text-white-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                         onClick={e => e.stopPropagation()}
                         aria-label={`GitHub repository for ${project.title}`}
                       >
@@ -168,7 +168,7 @@ export default function Projects() {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="text-gray-600 dark:text-white-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                         onClick={e => e.stopPropagation()}
                         aria-label={`Live demo for ${project.title}`}
                       >
@@ -192,7 +192,7 @@ export default function Projects() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-white dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-gray dark:bg-gray-800 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
             >
               <div className="relative">
                 <div className="h-64 w-full relative">
@@ -227,7 +227,7 @@ export default function Projects() {
                   ))}
                 </div>
                 
-                <div className="text-gray-600 dark:text-gray-300 mb-6 outfit-outfit">
+                <div className="text-black-600 dark:text-black-300 mb-6 outfit-outfit">
                   <p className="mb-4">{selectedProject.longDescription || selectedProject.description}</p>
                 </div>
                 
