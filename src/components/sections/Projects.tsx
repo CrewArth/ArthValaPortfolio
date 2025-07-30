@@ -30,7 +30,7 @@ const projects: Project[] = [
     image: "/images/projects/shapeshiftai.png",
     tags: ["Nextjs", "TailwindCSS", "MongoDB", "NodeJS", "MeshyAI"],
     github: "https://github.com/CrewArth/ShapeShiftAI",
-    demo: "shapeshiftai.vercel.app",
+    demo: "https://shapeshiftai.vercel.app",
   },
   {
     id: "cricket-turf",
