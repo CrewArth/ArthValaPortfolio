@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFileAlt, FaYoutube } from "react-icons/fa";
 import AnimationWrapper from "../ui/AnimationWrapper";
 import GradientTypingAnimation from "../ui/GradientTypingAnimation";
 
@@ -74,6 +74,15 @@ export default function Hero() {
                 aria-label="LinkedIn"
               >
                 <FaLinkedin size={24} />
+              </a>
+              <a
+                href="https://youtube.com/c/CricketGuruji15"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors interactive-element"
+                aria-label="Youtube"
+              >
+                <FaYoutube size={24} />
               </a>
             </div>
           </AnimationWrapper>
