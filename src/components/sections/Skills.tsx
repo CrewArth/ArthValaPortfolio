@@ -14,7 +14,7 @@ import {
   SiHtml5,
   SiDjango,
   SiOpencv,
-  SiKeras
+  SiKeras,
 } from "react-icons/si";
 import AnimationWrapper from "../ui/AnimationWrapper";
 
@@ -50,6 +50,7 @@ const skillCategories: SkillCategory[] = [
     title: "Backend",
     skills: [
       { name: "Node.js", icon: <FaNode size={24} />, color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
+      // { name: "Code", icon: <FaA size={24} />, color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
       { name: "Flask", icon: <SiFlask size={24} />, color: "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300" },
       { name: "MongoDB", icon: <SiMongodb size={24} />, color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
       { name: "Firebase", icon: <SiFirebase size={24} />, color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" },
