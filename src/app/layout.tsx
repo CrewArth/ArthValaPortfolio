@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/ui/CustomCursor";
 import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,7 +44,10 @@ export default function RootLayout({
         {children}
         <Analytics />
 
-        <script src='https://cdn.jotfor.ms/agent/embedjs/0198bb4ce4aa76e195c59ddb9533896a82b0/embed.js'></script>
+        <Script
+          src="https://cdn.jotfor.ms/agent/embedjs/0198bb4ce4aa76e195c59ddb9533896a82b0/embed.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
