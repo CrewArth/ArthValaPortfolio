@@ -42,6 +42,8 @@ export default function RootLayout({
         <CustomCursor />
         {children}
         <Analytics />
+
+        <script src='https://cdn.jotfor.ms/agent/embedjs/0198bb4ce4aa76e195c59ddb9533896a82b0/embed.js'></script>
       </body>
     </html>
   );
