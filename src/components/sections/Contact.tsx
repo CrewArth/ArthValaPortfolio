@@ -79,7 +79,7 @@ export default function Contact() {
       label: "Email",
     },
     {
-      href: "https://instagram.com/arthvala",
+      href: "https://instagram.com/arthvala.15",
       icon: <FaInstagram size={24} />,
       label: "Instagram",
     },
