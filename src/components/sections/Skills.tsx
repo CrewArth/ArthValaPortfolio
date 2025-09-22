@@ -18,6 +18,7 @@ import {
   SiMysql, SiFastapi 
 } from "react-icons/si";
 import AnimationWrapper from "../ui/AnimationWrapper";
+import { FaAws } from "react-icons/fa6";
 
 interface SkillCategory {
   title: string;
@@ -89,6 +90,12 @@ const skillCategories: SkillCategory[] = [
       { name: "Adaptability", icon: <FaChartLine size={24} />, color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300" },
     ]
   },
+  {
+    title: "Cloud",
+    skills: [
+      { name: "AWS", icon: <FaAws size={24} />, color: "bg-black text-[#FF9900] dark:bg-[#FF9900] dark:text-black" },
+    ]
+  }
 ];
 
 export default function Skills() {

@@ -16,19 +16,19 @@ const timelineItems: TimelineItem[] = [
   {
     year: "2021 - 2025",
     title: "Integrated MCA",
-    description: "Parul University, Vadodara - Pursuing Integrated Master of Computer Applications with Specialization in Artificial Intelligence",
+    description: "Parul University, Vadodara - Pursued Integrated Master of Computer Applications with Specialization in Artificial Intelligence",
     type: "education",
   },
   {
     year: "2021",
     title: "High Secondary Education",
-    description: "Did my HSC from Tree House High School, Vadodara and improved to 73%.",
+    description: "Did HSC from Tree House High School, Vadodara and improved to 73%",
     type: "education",
   },
   {
     year: "2019",
     title: "Secondary School Education",
-    description: "Did my SSC from Tree House High School, Vadodara and achived 68%.",
+    description: "Did SSC from Tree House High School, Vadodara and achieved 68%",
     type: "education",
   },
 ];
