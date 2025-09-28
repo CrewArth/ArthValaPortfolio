@@ -6,7 +6,7 @@ import {
   FaGitAlt, FaFigma, FaBrain, FaUsers,
   FaLightbulb, FaChartLine,
   FaJava, FaJs,
-  FaGithub,
+  FaGithub, FaReact
 } from "react-icons/fa";
 import {
   SiTypescript, SiNextdotjs, SiTailwindcss, SiFlask,
@@ -44,9 +44,11 @@ const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",
     skills: [
-      { name: "HTML", icon: <SiHtml5 size={24} />, color: "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300" },
+      { name: "React", icon: <FaReact size={24} />,color: "bg-[#61DAFB] text-[#20232A] dark:bg-[#61DAFB]/30 dark:text-[#61DAFB]"},
       { name: "Next.js", icon: <SiNextdotjs size={24} />, color: "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300" },
       { name: "Tailwind CSS", icon: <SiTailwindcss size={24} />, color: "bg-cyan-100 text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-300" },
+      { name: "HTML", icon: <SiHtml5 size={24} />, color: "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-300" },
+      
     ]
   },
   {
