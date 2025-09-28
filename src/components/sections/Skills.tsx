@@ -1,21 +1,21 @@
 "use client";
 
 import React from "react";
-import { 
-  FaPython, FaNode, 
-  FaGitAlt, FaFigma, FaBrain, FaUsers, 
+import {
+  FaPython, FaNode,
+  FaGitAlt, FaFigma, FaBrain, FaUsers,
   FaLightbulb, FaChartLine,
-  FaJava,
+  FaJava, FaJs,
   FaGithub,
 } from "react-icons/fa";
-import { 
+import {
   SiTypescript, SiNextdotjs, SiTailwindcss, SiFlask,
   SiMongodb, SiFirebase, SiTensorflow,
   SiHtml5,
   SiDjango,
   SiOpencv,
   SiKeras,
-  SiMysql, SiFastapi 
+  SiMysql, SiFastapi
 } from "react-icons/si";
 import AnimationWrapper from "../ui/AnimationWrapper";
 import { FaAws } from "react-icons/fa6";
@@ -37,6 +37,7 @@ const skillCategories: SkillCategory[] = [
     skills: [
       { name: "Python", icon: <FaPython size={24} />, color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300" },
       { name: "Java", icon: <FaJava size={24} />, color: "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-300" },
+      { name: "JavaScript", icon: <FaJs size={24} />, color: "bg-[#F7DF1E] text-black dark:bg-[#F7DF1E]/30 dark:text-[#F7DF1E]" },
       { name: "TypeScript", icon: <SiTypescript size={24} />, color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300" },
     ]
   },
@@ -106,7 +107,7 @@ export default function Skills() {
           <h2 className="section-title">
             My Skills
           </h2>
-          
+
           <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
             I&apos;ve worked with a variety of technologies and continue to expand my skillset.
             Here&apos;s an overview of my technical and soft skills.
