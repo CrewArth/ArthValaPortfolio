@@ -58,7 +58,7 @@ export default function Hero() {
             {/* Social Links */}
             <div className="mt-8 flex items-center justify-center lg:justify-start gap-6">
               <a
-                href="https://github.com/arthvala"
+                href="https://github.com/CrewArth"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors interactive-element"

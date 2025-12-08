@@ -4,11 +4,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt, FaTimes } from "react-icons/fa";
-import Card from '@mui/material/Card';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Button from '@mui/material/Button';
 
 interface Project {
   id: string;
@@ -23,24 +18,22 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: "guest-house-booking",
+    title: "Rishabh Guest House Booking",
+    description: "A guest house booking system where employees submit stay requests using JWT-secured access, and admins approve or reject them through a structured workflow.",
+    longDescription: "A comprehensive web application for managing guest house bookings, rooms, and beds with separate interfaces for users and administrators. Built with MERN stack (MongoDB, Express.js, React, Node.js) with Redis caching for optimal performance.",
+    image: "/images/projects/guest-house.png",
+    tags: ["Reactjs", "Nodejs", "MongoDB", "Expressjs", "Redis"],
+    github: "https://github.com/CrewArth/RishabhGuestHouseBooking",
+  },
+  {
     id: "shapeshift-ai",
     title: "ShapeShift.AI",
     description: "ShapeShift.AI is a web-based platform that enables users to transform text descriptions and 2D images into 3D models. ",
     longDescription: "[Vibe Coding] ShapeShift.AI is a web-based platform that enables users to transform text descriptions and 2D images into 3D models. Leveraging advanced AI technology, the system provides an intuitive interface for creating, customizing, and downloading 3D designs in formats like FBX, OBJ, and GLB, catering to creatives and professionals alike. ",
     image: "/images/projects/shapeshiftai.png",
     tags: ["Nextjs", "TailwindCSS", "MongoDB", "NodeJS", "MeshyAI"],
-    github: "https://github.com/CrewArth/ShapeShiftAI",
     demo: "https://shapeshiftai.vercel.app",
-  },
-  {
-    id: "cricket-turf",
-    title: "Cricket Turf Booking System",
-    description: "Online platform for booking Sports Turf with real-time availability and payment system.",
-    longDescription: "[Vibe Coding] This full-stack application allows users to find and book sports turf in their area. It features real-time availability checking, secure payment processing, ticket based scanning and user reviews. The admin dashboard provides turf owners with booking management, analytics, and revenue tracking.",
-    image: "/images/projects/cricketturf.png",
-    tags: ["Next.js", "MongoDB", "Clerk", "Tailwind CSS"],
-    github: "https://github.com/CrewArth/Turf-Booking-Website-Full-Stack",
-    demo: "https://turf106.vercel.app",
   },
   {
     id: "classivision",
@@ -51,33 +44,7 @@ const projects: Project[] = [
     tags: ["Python", "Streamlit", "Tensorflow", "Tailwind CSS"],
     github: "https://github.com/CrewArth/ClassiVision-TrainExportPredict",
     demo: "https://classivision.streamlit.app/"
-  },
-  {
-    id: "qr-cafe",
-    title: "Cafe Menu System - QR-Based Food Ordering",
-    description: "Offline Full Stack Web Software to Order, Manage Food for Cafes.",
-    longDescription: "[Vibe Coding] This is Full Stack Application that allows customers to view & order food by scanning Customized QR Code from phone. It comes with Admin and Owner panel where Admin can handle Requests and pass to chef while Owner is responsible for maintaining food items and monitoring.",
-    image: "/images/projects/cafe.jpg",
-    tags: ["NextJS", "NodeJS", "Tailwind CSS", "Socket.io"],
-  },
-  {
-    id: "object-tracking",
-    title: "Realtime Object Tracking",
-    description: "This is a Simple Object Tracking Program using OpenCV Python. ",
-    longDescription: "This is a Simple Object Tracking Program using OpenCV Python. Using this Program, You can Track any Object you like and when it disappears, It will display Lost.",
-    image: "/images/projects/objtrc.jpg",
-    tags: ["Python", "OpenCV", "Tensorflow", "Machine Learning"],
-    github: "https://github.com/CrewArth/ObjectTracking-in-Python",
-  },
-  {
-    id: "yoga-pose",
-    title: "Yoga Pose Detector",
-    description: "This App allows to detect the pose using OpenCV and Mediapipe.",
-    longDescription: "Yoga Pose detector detects the Pose and tells you the name of the pose instantly. It uses OpenCV for Camera Feed, Mediapipe and Landmark Recognition and ML Model to detect and provide Pose Name.",
-    image: "/images/projects/yoga-pose.jpg",
-    tags: ["Python", "OpenCV", "Tensorflow", "Mediapipe"],
-    github: "https://github.com/CrewArth/YogaPoseDetector",
-  },
+  }
 ];
 
 export default function Projects() {
@@ -125,62 +92,76 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               style={{ display: 'flex', justifyContent: 'center' }}
             >
-              <Card sx={{ maxWidth: 370, width: '100%', borderRadius: 4, boxShadow: 6, transition: 'transform 0.3s, box-shadow 0.3s', '&:hover': { transform: 'translateY(-8px) scale(1.03)', boxShadow: 12 }, background: 'linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%)', }}>
-                <CardMedia
-                  component="img"
-                  height="190"
-                  image={project.image}
-                  alt={project.title}
-                  style={{ objectFit: 'cover' }}
-                />
-                <CardContent>
-                  <h3 className="text-xl font-bold mb-2 outfit-outfit">{project.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 outfit-outfit">
+              <article className="group relative w-full max-w-sm overflow-hidden rounded-2xl border border-gray-200/70 bg-white/90 shadow-xl backdrop-blur transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:border-slate-700/80 dark:bg-slate-900/80">
+                <div className="relative h-48 w-full overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-75" />
+                </div>
+
+                <div className="flex flex-col gap-4 p-5">
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-lg font-semibold text-slate-900 outfit-outfit dark:text-slate-100">
+                      {project.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-sm leading-relaxed text-slate-600 outfit-outfit dark:text-slate-300">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 mb-4">
+
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <span 
+                      <span
                         key={`${project.id}-${tag}`}
-                        className="text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded-md"
+                        className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:bg-slate-800 dark:text-slate-200"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
-                </CardContent>
-                <CardActions sx={{ display: 'flex', justifyContent: 'space-between', px: 2, pb: 2 }}>
-                  <div style={{ display: 'flex', gap: 12 }}>
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                        onClick={e => e.stopPropagation()}
-                        aria-label={`GitHub repository for ${project.title}`}
-                      >
-                        <FaGithub size={20} />
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-                        onClick={e => e.stopPropagation()}
-                        aria-label={`Live demo for ${project.title}`}
-                      >
-                        <FaExternalLinkAlt size={18} />
-                      </a>
-                    )}
+
+                  <div className="flex items-center justify-between pt-2">
+                    <div className="flex items-center gap-3 text-slate-500 dark:text-slate-300">
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition-colors hover:text-indigo-500 dark:hover:text-indigo-300"
+                          onClick={(e) => e.stopPropagation()}
+                          aria-label={`GitHub repository for ${project.title}`}
+                        >
+                          <FaGithub size={18} />
+                        </a>
+                      )}
+                      {project.demo && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="transition-colors hover:text-indigo-500 dark:hover:text-indigo-300"
+                          onClick={(e) => e.stopPropagation()}
+                          aria-label={`Live demo for ${project.title}`}
+                        >
+                          <FaExternalLinkAlt size={16} />
+                        </a>
+                      )}
+                    </div>
+
+                    <button
+                      onClick={(e) => { e.stopPropagation(); setSelectedProject(project); }}
+                      className="rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-indigo-700 hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-slate-900"
+                    >
+                      Learn more
+                    </button>
                   </div>
-                  <Button size="small" color="primary" onClick={e => { e.stopPropagation(); setSelectedProject(project); }} sx={{ fontWeight: 600, textTransform: 'none' }}>
-                    Learn More
-                  </Button>
-                </CardActions>
-              </Card>
+                </div>
+              </article>
             </motion.div>
           ))}
         </div>
