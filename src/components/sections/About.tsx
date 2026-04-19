@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { FaDownload, FaQuoteLeft, FaQuoteRight, FaUserGraduate } from "react-icons/fa";
 import AnimationWrapper from "../ui/AnimationWrapper";
+import ProfessionalSummary from "./ProfessionalSummary";
 
 
 interface TimelineItem {
@@ -109,7 +110,7 @@ export default function About() {
 
         {/* Timeline Section */}
         <AnimationWrapper variant="fadeUp" delay={0.6} className="mt-20 mb-20">
-          <h3 className="text-2xl font-bold mb-4 text-center">Education & Experience</h3>
+          <h3 className="text-2xl font-bold mb-4 text-center">Education Summary</h3>
           <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mb-8"></div>
 
           {/* Desktop Timeline (hidden on mobile) */}
@@ -188,6 +189,8 @@ export default function About() {
             </div>
           </div>
         </AnimationWrapper>
+
+        <ProfessionalSummary />
       </div>
     </section>
   );

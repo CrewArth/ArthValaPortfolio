@@ -34,7 +34,7 @@ export default function Hero() {
               />
             </h1>
             <h2 className="text-3xl md:text-4xl font-medium mb-6 select-none">
-            An AI enthusiast with a passion for Computer Vision and Python Development.
+            Bringing ideas to life through end-to-end web development.
             </h2>
           <br />
             {/* CTA Buttons */}
